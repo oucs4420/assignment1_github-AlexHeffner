@@ -17,9 +17,13 @@ int main( int argc, char* argv[] )
         if(inFile.fail()){
             std::cout << argv[arg] << ": " << -1 << '\n';
         }else{
-            int lineCount = std::count(std::istreambuf_iterator<char>(inFile), std::istreambuf_iterator<char>(), '\n');
-            std::cout << argv[arg] << ": " << lineCount << '\n' ;
+            int numLines = 0;
+            std::string unused;
+            while ( std::getline(inFile, unused) )
+                ++numLines;
+            std::cout << argv[arg] << ": " << numLines << '\n' ;
         }
     }
     exit(0); // this means that the program executed correctly!
 }
+//int lineCount = std::count(std::istreambuf_iterator<char>(inFile), std::istreambuf_iterator<char>(), '\n');
