@@ -7,7 +7,6 @@ using namespace std;
 //program: ./filesize
 // input.3lines: 3
 // input.1line: 1
-
     // just to get you started, this is how to refer to the arguments that were passed
 int main( int argc, char* argv[] )
 {
@@ -27,4 +26,3 @@ int main( int argc, char* argv[] )
     }
     exit(0); // this means that the program executed correctly!
 }
-//int lineCount = std::count(std::istreambuf_iterator<char>(inFile), std::istreambuf_iterator<char>(), '\n');
