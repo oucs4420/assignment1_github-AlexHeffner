@@ -12,12 +12,12 @@ using namespace std;
 int main( int argc, char* argv[] )
 {
     for (int arg = 1; arg < argc; ++arg){
-        ifstream inFile("file"); 
+        std::ifstream inFile("file"); 
         inFile.open(argv[arg]);
         if(inFile.fail()){
             std::cout << argv[arg] << ": " << -1 << '\n';
         }else{
-            int lineCount = count(istreambuf_iterator<char>(inFile), istreambuf_iterator<char>(), '\n');
+            int lineCount = std::count(std::istreambuf_iterator<char>(inFile), std::istreambuf_iterator<char>(), '\n');
             std::cout << argv[arg] << ": " << lineCount << '\n' ;
         }
     }
