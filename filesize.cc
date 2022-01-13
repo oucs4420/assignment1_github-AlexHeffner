@@ -18,11 +18,12 @@ int main( int argc, char* argv[] )
             std::cout << " " << argv[arg] << ": " << -1 << '\n';
         }else{
             int numLines = 0;
-            std::string unused;
-            while ( std::getline(inFile, unused) )
+            std::string junk;
+            while (std::getline(inFile, junk))
                 ++numLines;
             std::cout << " " << argv[arg] << ": " << numLines << '\n' ;
         }
+        inFile.close();
     }
     exit(0); // this means that the program executed correctly!
 }
